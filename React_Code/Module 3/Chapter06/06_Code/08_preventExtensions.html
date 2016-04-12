@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var proxy = new Proxy({}, {
+          preventExtensions: function(target){
+            Object.preventExtensions(target);
+            return true;
+          }
+        });
+
+        Reflect.preventExtensions(proxy);
+
+        proxy.a = 12;
+        console.log(proxy.a); //Output "undefined"
+      </script>
+    </body>
+</html>

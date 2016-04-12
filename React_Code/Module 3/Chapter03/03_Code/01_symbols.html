@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+			let s1 = window.Symbol("My Symbol");
+			let s2 = window.Symbol("My Symbol");
+
+			console.log(s1 === s2); //Output is "false"
+
+        </script>
+    </body>
+</html>

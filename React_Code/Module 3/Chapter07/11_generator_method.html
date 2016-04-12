@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          class myClass
+          { 
+            * generator_function()
+            {
+              yield 1;
+              yield 2;
+              yield 3;
+              yield 4;
+              yield 5;
+            }
+
+          }
+
+          var obj = new myClass();
+
+          let generator = obj.generator_function();
+
+          console.log(generator.next().value);
+          console.log(generator.next().value);
+          console.log(generator.next().value);
+          console.log(generator.next().value);
+          console.log(generator.next().value);
+          console.log(generator.next().done);
+
+          console.log("generator_function" in myClass.prototype);
+
+        </script>
+    </body>
+</html>

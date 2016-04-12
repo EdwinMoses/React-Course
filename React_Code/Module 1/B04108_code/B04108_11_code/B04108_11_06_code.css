@@ -1,0 +1,35 @@
+@media only screen and (min-width: 513px) {
+        #Calendar {
+          height: 46%;
+          left: 2%;
+          overflow-y: auto;
+          position: absolute;
+          top: 2%;
+          width: 46%;
+        }
+        #Scratchpad {
+          height: 46%;
+          left: 2%;
+          overflow-y: auto;
+          position: absolute;
+          top: 52%;
+          width: 46%;
+        }
+        #Todo {
+          height: 46%;
+          left: 52%;
+          overflow-y: auto;
+          position: absolute;
+          top: 0;
+          width: 46%;
+        }
+        #YouPick {
+          height: 50%;
+          left: 52%;
+          overflow-y: auto;
+          position: absolute;
+          top: 52%;
+          width: 46%;
+        }
+      }
+

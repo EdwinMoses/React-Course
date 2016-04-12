@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          var p1 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+              resolve();
+            }, 1000);
+          });
+
+          var p2 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+              resolve();
+            }, 2000);
+          });
+
+          var arr = [p1, p2];
+
+          Promise.all(arr).then(function(){
+            console.log("Done"); //"Done" is logged after 2 seconds
+          });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var proxy = new Proxy({age: 12}, {
+          deleteProperty: function(target, property){
+              return delete target[property];
+          }
+        });
+
+        Reflect.deleteProperty(proxy, "age");
+        console.log(proxy.age); //Output "undefined"
+      </script>
+    </body>
+</html>

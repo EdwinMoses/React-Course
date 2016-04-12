@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          navigator.getBattery().then(function(value){
+            console.log("Batter Level: " + (value.level * 100));
+          }, function(reason){
+            console.log("Error: " + reason);
+          });
+        </script>
+    </body>
+</html>

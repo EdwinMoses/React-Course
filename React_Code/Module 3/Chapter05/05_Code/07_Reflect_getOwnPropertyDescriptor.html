@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var obj = {
+          name: "Eden"
+        };
+
+        var descriptor = Reflect.getOwnPropertyDescriptor(obj, "name");
+
+        console.log(descriptor.value);
+        console.log(descriptor.writable);
+        console.log(descriptor.enumerable);
+        console.log(descriptor.configurable);
+      </script>
+    </body>
+</html>

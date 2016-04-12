@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var target = {
+          age: 12
+        };
+        var handler = {};
+        var proxy = new Proxy(target, handler);
+
+        proxy.name = "Eden";
+
+        console.log(target.name);
+        console.log(proxy.name);
+        console.log(target.age);
+        console.log(proxy.age);
+      </script>
+    </body>
+</html>

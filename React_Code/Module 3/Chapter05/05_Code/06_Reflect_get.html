@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var obj = {
+          __name__: "Eden"
+        };
+
+        Reflect.defineProperty(obj, "name", {
+          get: function(){
+            return this.__name__;
+          }
+        });
+
+        console.log(obj.name);
+
+        var name = Reflect.get(obj, "name", {__name__: "John"});
+
+        console.log(name);
+      </script>
+    </body>
+</html>

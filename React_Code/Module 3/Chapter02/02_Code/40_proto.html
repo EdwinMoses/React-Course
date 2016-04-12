@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            //In ES5
+            var x = {x: 12};
+            var y = Object.create(x, {y: {value: 13}}); 
+            console.log(y.x);
+            console.log(y.y);
+
+            //In ES6
+            let a = {a: 12, __proto__: {b: 13}};
+            console.log(a.a);
+            console.log(a.b);
+
+        </script>
+    </body>
+</html>

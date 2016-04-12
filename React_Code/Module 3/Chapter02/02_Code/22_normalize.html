@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            var a = "\u00E9".normalize();
+            var b = "e\u0301".normalize();
+
+            console.log(a == b);
+
+            console.log(a.length);
+            console.log(b.length);
+
+            for(let i = 0; i < a.length; i++)
+            {
+              console.log(a[i]);
+            }
+
+            for(let i = 0; i < b.length; i++)
+            {
+              console.log(b[i]);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            let x = {x: 12};
+            let y = {y: 13}; 
+            Object.setPrototypeOf(y, x)
+            console.log(y.x); //12
+            console.log(y.y); //13
+        </script>
+    </body>
+</html>

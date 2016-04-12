@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+			let a = 0;
+			let a = 1; //TypeError
+
+			function myFunction()
+			{
+			  let b = 2;
+			  let b = 3; //TypeError
+			  
+			  if(true)
+			  {
+			    let c = 4;
+			    let c = 5; //TypeError
+			  }
+			}
+
+			myFunction();
+        </script>
+    </body>
+</html>

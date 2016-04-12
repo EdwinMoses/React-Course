@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            function epsilonEqual(a, b) 
+            {
+              return Math.abs(a - b) < Number.EPSILON;
+            }
+
+            console.log(epsilonEqual(0.1 + 0.2, 0.3));
+            console.log(epsilonEqual(0.9 - 0.8, 0.1));
+        </script>
+    </body>
+</html>

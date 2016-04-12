@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          var obj1 = {
+            print(){
+              console.log("Hello");
+            }
+          }
+
+          var obj2 = {
+            print(){    
+              super.print();
+            }
+          }
+
+          Object.setPrototypeOf(obj2, obj1);
+          obj2.print(); //Output “Hello”
+        </script>
+    </body>
+</html>

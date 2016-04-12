@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+      <script type="text/javascript" src="reflect.js"></script>
+      <script type="text/javascript">
+        var s = Symbol();
+
+        var object = {age: 12, __proto__: {name: "Eden"}, [s]: "Symbol"};
+
+        Object.defineProperty(object, "profession", {
+          enumerable: false,
+          configurable: false,
+          writable: false,
+          value: "Developer"
+        })
+
+        var proxy = new Proxy(object, {
+          ownKeys: function(target){
+            return Object.getOwnPropertyNames(target).concat(Object.getOwnPropertySymbols(target)); 
+          }
+        });
+
+        console.log(Reflect.ownKeys(proxy));
+        console.log(Object.getOwnPropertyNames(proxy));
+        console.log(Object.keys(proxy));
+        console.log(Object.getOwnPropertySymbols(proxy));
+
+      </script>
+    </body>
+</html>

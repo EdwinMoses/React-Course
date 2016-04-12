@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var proxy = new Proxy(function(){}, {
+          construct: function(target, arguments){
+            return {name: arguments[0]};
+          }
+        });
+
+        var obj = new proxy("Eden");
+        console.log(obj.name); //Output "Eden"
+      </script>
+    </body>
+</html>

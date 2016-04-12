@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          let obj = {a: 12};
+          let s1 = Symbol("mySymbol");
+          let s2 = Symbol("mySymbol");
+
+          Object.defineProperty(obj, s1, {
+            enumerable: false
+          });
+
+          obj[s2] = "";
+
+          console.log(Object.getOwnPropertySymbols(obj));
+        </script>
+    </body>
+</html>

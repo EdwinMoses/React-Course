@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var proxy = new Proxy({}, {
+          set: function(target, property, value, receiver){
+            target[property] = value;
+            return true;
+          }
+        });
+
+        Reflect.set(proxy, "name", "Eden");
+        console.log(proxy.name); //Output "Eden"
+      </script>
+    </body>
+</html>

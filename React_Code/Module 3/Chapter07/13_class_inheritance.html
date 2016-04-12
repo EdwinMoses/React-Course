@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          function A(a)
+          {
+            this.a = a;
+          }
+
+          A.prototype.printA = function(){
+            console.log(this.a);
+          }
+
+          class B extends A
+          {
+            constructor(a, b)
+            {
+              super(a);
+              this.b = b;
+            }
+            
+            printB()
+            {
+              console.log(this.b);
+            }
+            
+            static sayHello()
+            {
+              console.log("Hello");
+            }
+          }
+
+          class C extends B
+          {
+            constructor(a, b, c)
+            {
+              super(a, b);
+              this.c = c;
+            }
+            
+            printC()
+            {
+              console.log(this.c);
+            }
+            
+            printAll()
+            {
+              this.printC();
+              super.printB();
+              super.printA();
+            }
+          }
+
+          var obj = new C(1, 2, 3);
+          obj.printAll();
+
+          C.sayHello();
+
+        </script>
+    </body>
+</html>

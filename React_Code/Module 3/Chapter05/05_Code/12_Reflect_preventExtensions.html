@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var obj = {
+          name: "Eden"
+        };
+
+        console.log(Reflect.isExtensible(obj)); //Output “true”
+
+        console.log(Reflect.preventExtensions(obj)); //Output "true"
+
+        console.log(Reflect.isExtensible(obj)); //Output “false”
+      </script>
+    </body>
+</html>

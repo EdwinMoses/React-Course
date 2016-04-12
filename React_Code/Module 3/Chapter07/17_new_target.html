@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          function myConstructor()
+          {
+            console.log(new.target.name);  
+          }
+
+          class myClass extends myConstructor
+          {
+            constructor()
+            {
+              super();
+            }
+          }
+
+          var obj1 = new myClass();
+          var obj2 = new myConstructor();
+        </script>
+    </body>
+</html>

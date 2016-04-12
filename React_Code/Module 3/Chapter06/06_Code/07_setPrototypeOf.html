@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var proxy = new Proxy({}, {
+          setPrototypeOf: function(target, value){
+            Reflect.setPrototypeOf(target, value);
+            return true;
+          }
+        });
+
+        Reflect.setPrototypeOf(proxy, {name: "Eden"});
+
+        console.log(Reflect.getPrototypeOf(proxy).name); //Output "Eden"
+      </script>
+    </body>
+</html>

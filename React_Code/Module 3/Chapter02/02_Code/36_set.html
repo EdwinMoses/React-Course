@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            let set = new Set("Hello!!!");
+
+            set.add(12); //add 12
+
+            console.log(set.has("!")); //check if value exists
+            console.log(set.size);
+
+            set.delete(12); //delete 12
+
+            console.log(...set);
+
+            set.clear(); //delete all values
+        </script>
+    </body>
+</html>

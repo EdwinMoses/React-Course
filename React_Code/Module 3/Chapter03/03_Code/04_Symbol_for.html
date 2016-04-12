@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          let obj = {};
+
+          (function(){
+            let s1 = Symbol("name");
+            obj[s1] = "Eden";
+          })();
+
+          //obj[s1] cannot be accessed here
+
+          (function(){
+            let s2 = Symbol.for("age");
+            obj[s2] = 27;
+          })();
+
+          console.log(obj[Symbol.for("age")]); //Output "27"
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var revocableProxy = Proxy.revocable({
+            age: 12
+          }, {
+            get: function(target, property, receiver){
+                if(property in target)
+                {
+                  return target[property];
+                }
+                else
+                {
+                  return "Not Found";
+                }
+            }
+          }
+        );
+
+
+        console.log(revocableProxy.proxy.age);
+
+        revocableProxy.revoke();
+
+        console.log(revocableProxy.proxy.name);
+      </script>
+    </body>
+</html>

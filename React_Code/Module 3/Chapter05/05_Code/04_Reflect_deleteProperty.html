@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var obj = {
+          name: "Eden"
+        }
+
+        console.log(obj.name); //Output "Eden"
+
+        Reflect.deleteProperty(obj, "name");
+
+        console.log(obj.name); //Output "undefined"
+      </script>
+    </body>
+</html>

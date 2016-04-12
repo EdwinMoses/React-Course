@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var proxy = new Proxy({age: 12, name: "Eden"}, {
+          enumerate: function(target){
+            var arr = [];
+
+            for(var p in target)
+            {
+              arr[arr.length] = p;
+            }
+
+            return arr[Symbol.iterator]();
+          }
+        });
+
+        var iterator = Reflect.enumerate(proxy);
+
+        console.log(iterator.next().value);
+        console.log(iterator.next().value);
+        console.log(iterator.next().done);
+      </script>
+    </body>
+</html>

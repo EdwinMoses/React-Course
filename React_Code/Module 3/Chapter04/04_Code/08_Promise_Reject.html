@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          var p1 = Promise.reject(4);
+          p1.then(null, function(value){
+            console.log(value);
+          });
+
+          Promise.reject({name: "Eden"}).then(null, function(value){
+            console.log(value.name);
+          });
+
+        </script>
+    </body>
+</html>

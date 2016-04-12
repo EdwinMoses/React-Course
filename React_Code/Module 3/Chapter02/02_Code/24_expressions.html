@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            let tag = function(strings, ...values)
+            {
+                let result = "";
+             
+                for(let i = 0; i < strings.length; i++)
+                {
+                    result += strings[i];
+                    if(i < values.length)
+                    {
+                        result += values[i];
+                    }
+                }
+             
+                return result;
+            };
+             
+            let a = 20;
+            let b = 10;
+            let c = "JavaScript";
+
+            let str = tag `My age is ${a+b} and I love ${c}`;
+             
+            console.log(str);
+
+        </script>
+    </body>
+</html>

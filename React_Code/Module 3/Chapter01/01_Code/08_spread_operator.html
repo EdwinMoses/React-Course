@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          function myFunction(a, b)
+          {
+            return a + b;
+          }
+
+          let data = [1, 4];
+
+          let result = myFunction(...data);
+
+          console.log(result); //Output “5”
+        </script>
+    </body>
+</html>

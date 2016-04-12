@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          function* generator_function()
+          {
+            yield 1;
+            yield 2;
+            yield 3;
+            yield 4;
+            yield 5;
+          }
+
+          let arr = [1, 2, 3];
+
+          for(let value of generator_function())
+          {
+            console.log(value);
+          }
+
+          for(let value of arr)
+          {
+            console.log(value);
+          }
+
+        </script>
+    </body>
+</html>

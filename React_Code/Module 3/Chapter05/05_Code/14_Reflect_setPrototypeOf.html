@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var obj = {};
+
+        Reflect.setPrototypeOf(obj, {
+          name: "Eden"
+        });
+
+        console.log(obj.name); //Output "Eden"
+      </script>
+    </body>
+</html>

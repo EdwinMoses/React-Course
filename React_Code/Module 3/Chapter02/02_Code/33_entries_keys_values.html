@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            let arr = ['a', 'b', 'c'];
+            let entries = arr.entries();
+            let keys = arr.keys();
+            let values = arr.values();
+
+            console.log(...entries);
+            console.log(...keys);
+            console.log(...values);
+        </script>
+    </body>
+</html>

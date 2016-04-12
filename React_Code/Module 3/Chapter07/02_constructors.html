@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          function Student(name)
+          {
+            this.name = name;
+          }
+
+          Student.prototype.printName = function(){
+            console.log(this.name);
+          }
+
+          var student1 = new Student("Eden");
+          var student2 = new Student("John");
+
+          student1.printName(); //Output "Eden"
+          student2.printName(); //Output "John"
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, Brython!</title>
+    <script src="brython.js"></script>
+    <script src="react.js"></script>
+  </head>
+  <body onload="brython()">
+    <p>Hello, static world!</p>
+    <div id="dynamic"></div>
+    <!--
+    <script type="text/javascript">
+      React.render(
+        React.createElement('p', null,
+          'Hello, JavaScript dynamic world!'),
+          document.getElementById('dynamic')
+        );
+      );
+    </script>
+    -->
+    <script type="text/python3">
+      from browser import document, window
+      window.React.render(window.React.createElement('p',
+        None, 'Hello, Python dynamic world!'),
+        document['dynamic']);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            let weakset = new WeakSet();
+
+            (function(){
+              let a = {};
+              weakset.add(a);
+            })()
+
+            //here 'a' is garbage collected from weakset
+
+            console.log(weakset.size); //output "undefined"
+
+            console.log(...weakset); //Exception is thrown
+
+            weakset.clear(); //Exception, no such function
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var proxy = new Proxy({age: 12}, {
+          has: function(target, property){
+            if(property in target)
+            {
+              return true;
+            }
+            else
+            {
+              return false;
+            }
+          }
+        });
+
+        console.log(Reflect.has(proxy, "name"));
+        console.log(Reflect.has(proxy, "age"));
+      </script>
+    </body>
+</html>

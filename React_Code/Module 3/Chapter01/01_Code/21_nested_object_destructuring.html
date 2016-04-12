@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+			var {name, otherInfo: {age}} = {name: "Eden", otherInfo: {age: 23}};
+			console.log(name, age); //Eden 23
+        </script>
+    </body>
+</html>

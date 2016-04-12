@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            var buffer = new ArrayBuffer(80);
+            var typed_array = new Float64Array(buffer);
+
+            typed_array[4] = 11;
+
+            console.log(typed_array.length);
+            console.log(typed_array[4]);
+        </script>
+    </body>
+</html>

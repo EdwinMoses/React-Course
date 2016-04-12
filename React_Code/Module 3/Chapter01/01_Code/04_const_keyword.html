@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            const pi = 3.141;
+            var r = 2;
+
+            console.log(pi * r * r); //Output "12.564"
+
+            pi = 12; //throws read-only exception
+
+        </script>
+    </body>
+</html>

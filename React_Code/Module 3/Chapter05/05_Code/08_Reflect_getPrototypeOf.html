@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var obj1 = {
+          __proto__: {
+            name: "Eden"
+          }
+        };
+
+        var obj2 = Reflect.getPrototypeOf(obj1);
+
+        console.log(obj2.name); //Output "Eden"
+      </script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pragmatometer</title>
+    <style type="text/css">
+      body
+        {
+        font-family: Verdana, Arial, sans;
+        }
+      td.Completed
+        {
+        border-left: 3px solid black;
+        background-color: black;
+        }
+      td.Delete
+        {
+        background-color: gray;
+        }
+      td.Invisible
+        {
+        background-color: white;
+        }
+      td.Background
+        {
+        background-color: black;
+        }
+      td.You.Decide
+        {
+        background-color: gray;
+        }
+      td.In.Progress
+        {
+        background-color: white;
+        }
+      td.Important
+        {
+        background-color: black;
+        }
+      td.In.Question
+        {
+        background-color: gray;
+        }
+      td.Problems
+        {
+        background-color: white;
+        }
+      @media only screen and (min-width: 513px)
+        {
+        #Calendar
+          {
+          height: 46%;
+          left: 2%;
+          overflow-y: auto;
+          position: absolute;
+          top: 2%;
+          width: 46%;
+          }
+        #Scratchpad
+          {
+          height: 46%;
+          left: 2%;
+          overflow-y: auto;
+          position: absolute;
+          top: 52%;
+          width: 46%;
+          }
+        #Todo
+          {
+          height: 46%;
+          left: 52%;
+          overflow-y: auto;
+          position: absolute;
+          top: 0;
+          width: 46%;
+          }
+        #YouPick
+          {
+          height: 50%;
+          left: 52%;
+          overflow-y: auto;
+          position: absolute;
+          top: 52%;
+          width: 46%;
+          }
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main"></div>
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react-with-addons.js">
+    </script>
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.0.2/showdown.js">
+    </script>
+    <script src="//cdn.ckeditor.com/4.4.7/basic/ckeditor.js"></script>
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="js/json2.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>

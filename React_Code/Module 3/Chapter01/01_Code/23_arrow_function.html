@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+            let circleArea = (pi, r) => {
+                let area = pi * r * r;
+                return area;
+            }
+
+            let result = circleArea(3.14, 3);
+
+            console.log(result); //Output "28.26"
+
+        </script>
+    </body>
+</html>

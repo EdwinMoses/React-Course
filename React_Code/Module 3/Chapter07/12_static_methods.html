@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          class Student
+          {
+            constructor(name)
+            {
+              this.name = name;
+            }
+            
+            static findName(student)
+            {
+              return student.name;
+            }
+          }
+
+          var s = new Student("Eden");
+          var name = Student.findName(s);
+
+          console.log(name); //Output "Eden"
+        </script>
+    </body>
+</html>

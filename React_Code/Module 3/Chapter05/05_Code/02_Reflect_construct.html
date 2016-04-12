@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        function constructor1(a, b)
+        {
+          this.a = a;
+          this.b = b;
+
+          this.f = function(){
+            return this.a + this.b + this.c;
+          }
+        }
+
+        function constructor2(){}
+        constructor2.prototype.c = 100;
+
+        var myObject = Reflect.construct(constructor1, [1,2], constructor2);
+
+        console.log(myObject.f()); //Output "103"
+      </script>
+    </body>
+</html>

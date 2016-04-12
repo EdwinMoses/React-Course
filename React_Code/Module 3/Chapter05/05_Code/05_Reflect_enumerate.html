@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var obj = {
+          a: 1,
+          b: 2,
+          c: 3
+        };
+
+        var iterator = Reflect.enumerate(obj);
+
+        console.log(iterator.next().value);
+        console.log(iterator.next().value);
+        console.log(iterator.next().value);
+        console.log(iterator.next().done);
+      </script>
+    </body>
+</html>

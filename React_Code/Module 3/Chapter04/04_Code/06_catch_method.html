@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          function ajax()
+          {
+            return new Promise(function(resolve, reject){
+              var request = new XMLHttpRequest();
+              var url = "data.json";
+              request.open("GET", url);
+              request.addEventListener("load", function(){
+                if(request.status === 200) 
+                {
+                  resolve(request.responseText);
+                }
+                else
+                {
+                  reject("Server Error: " + request.status);
+                }            
+              }, false);
+              request.addEventListener("error", function(){
+                reject("Cannot Make AJAX Request");
+              }, false);
+
+              request.send();
+            });
+          }
+
+          function verify(value)
+          {
+            return new Promise(function(resolve, reject){
+              if(value == true) 
+              {
+                //make AJAX request to send data to server
+              } 
+              else 
+              {
+                //make AJAX request to send data to server
+              }  
+            })
+          }
+
+          ajax().then(function(value){
+            value = JSON.parse(value);
+            return value;
+          }).then(function(value){
+            console.log(value.Name);
+            return value;
+          }).then(function(value){
+            console.log(value.Profession);
+            return value;
+          }).then(function(value){
+            console.log(value.Age);
+            return value;
+          }).then(function(value){
+            var result = confirm("Is the data correct?");
+            return result;
+          }).then(verify).catch(function(reason){
+            console.log(reason);
+          });
+        </script>
+    </body>
+</html>

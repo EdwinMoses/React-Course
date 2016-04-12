@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          function Student(name)
+          {
+              this.name = name;
+          }
+
+          Student.prototype.printName = function(){
+              console.log(this.name);
+          }
+
+          var s1 = new Student("Eden");
+          var s2 = new Student("John");
+
+          function School(name)
+          {
+            this.name = name;
+            this.printName = function(){
+              console.log(this.name);
+            }
+          }
+
+          var s3 = new School("ABC");
+          var s4 = new School("XYZ");
+
+          console.log(s1.printName == s2.printName);
+          console.log(s3.printName == s4.printName);
+        </script>
+    </body>
+</html>

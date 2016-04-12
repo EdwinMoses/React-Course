@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="js/traceur.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="module">
+          var object1 = {
+            name: "Eden",
+            __proto__: {age: 24}
+          }
+
+          var object2 = {name: "Eden"}
+          Object.setPrototypeOf(object2, {age: 24});
+
+          var object3 = Object.create({age: 24}, {name: {value: "Eden"}});
+
+          console.log(object1.name + " " + object1.age);
+          console.log(object2.name + " " + object2.age);
+          console.log(object3.name + " " + object3.age);
+        </script>
+    </body>
+</html>

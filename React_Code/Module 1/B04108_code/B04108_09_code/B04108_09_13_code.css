@@ -1,0 +1,37 @@
+      td.Completed
+        {
+        border-left: 3px solid black;
+        background-color: black;
+        }
+      td.Delete
+        {
+        background-color: gray;
+        }
+      td.Invisible
+        {
+        background-color: white;
+        }
+      td.Background
+        {
+        background-color: black;
+        }
+      td.You.Decide
+        {
+        background-color: gray;
+        }
+      td.In.Progress
+        {
+        background-color: white;
+        }
+      td.Important
+        {
+        background-color: black;
+        }
+      td.In.Question
+        {
+        background-color: gray;
+        }
+      td.Problems
+        {
+        background-color: white;
+        }

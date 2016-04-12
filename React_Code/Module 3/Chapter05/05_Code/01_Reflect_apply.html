@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        function function_name(a, b, c)
+        {
+            return this.value + a + b + c;
+        }
+
+        var returned_value = Reflect.apply(function_name, {value: 100}, [10, 20, 30]); 
+
+        console.log(returned_value); //Output "160"
+      </script>
+    </body>
+</html>
